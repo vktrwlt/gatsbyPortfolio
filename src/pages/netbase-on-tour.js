@@ -5,6 +5,7 @@ import SEO from '../components/seo';
 
 import Project from '../components/Project/Project';
 import ContentHeader from '../components/Content/ContentHeader';
+import { primaryColor } from '../utils/variables';
 const ProjectGrid = styled.div`
 	display: grid;
 	grid-gap: 30px;
@@ -14,7 +15,6 @@ const ProjectGrid = styled.div`
 `;
 
 const Content = styled.div`
-	max-width: 950px;
 	margin: 0 auto;
 `;
 
@@ -25,9 +25,26 @@ const ContentBody = styled.div`
 	& p {
 		${tw` text-lg font-normal`}
 	}
+	${tw`leading-normal`};
 `;
 
 const ContentDetails = styled.div``;
+
+const ButtonList = styled.ul`
+	@media screen and (min-width: 600px) {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		${tw`flex flex-wrap`};
+
+		& li {
+			display: inline-block;
+			padding: 10px 15px;
+			margin: 10px;
+			border: 1.5px solid ${primaryColor};
+		}
+	}
+`;
 
 const ContentText = styled.div``;
 
@@ -40,37 +57,37 @@ const nbontour = () => (
 			<ContentBody>
 				<ContentDetails>
 					<h2>
-						Role: <span style={{ fontWeight: '400' }}>Front-End Developer</span>
+						Role: <span style={{ display: 'inline-block' }}>Front-End Developer</span>
 					</h2>
 					<h2>Tech Stack</h2>
-					<ul>
+					<ButtonList>
 						<li>HTML5 / CSS3</li>
 						<li>WordPress</li>
 						<li>jQuery</li>
 						<li>React</li>
 						<li>Gatsby</li>
-						<li>Graphql</li>
+						<li>GraphQL</li>
 						<li>API</li>
 						<li>Responsive Web Design</li>
 						<li>Site Optimization</li>
-					</ul>
+					</ButtonList>
+					<h2>Project link</h2>
 				</ContentDetails>
 				<ContentText>
 					<h2>About this project</h2>
 					<p>
-						The company was hosting its 2nd annual roadshow events and required a landing page that held all
-						the speakers information for each city they are touring. Due to a short time frame and a design
-						that was ever changing, there was a need for a page that can be built fast and flexible enough
-						for a designer to make changes to. I built NetBase On Tour 2018 using WordPress and Divi theme.
-						The visual builder gave easy access to layout components without heavily involving the developer
-						to make changes. At the cost of speed and flexiblity, the content were coded in static blocks,
-						which means when a session title have changed, we will need to manually update the places that
-						are mentioned.
+						The company required a landing page for their 2nd annual roadshow event that needs to display
+						all the speakers information and cities they are visiting. The page need to be built fast and
+						flexible enough for members of the marketing team to make changes to without heavily involving
+						the developer to make changes. I built NetBase On Tour 2018 using WordPress and Divi theme. The
+						visual builder gave easy access to layout components and made use of the framework that the
+						company is using. At the cost of speed and flexiblity (along with the trade-off of using Divi
+						theme), the content were coded in static blocks, which means when a session title have changed,
+						we will need to manually update the places that are mentioned.
 						<br />
 						<br />
 						As the design was finalized for 2019, I recreated the front-end using Gatsby, React, and
-						leveraged Airtable CMS as our back-end. I have tried out a few other headless CMS APIs, but I
-						liked Airtable the most for this project because it offered a 'Google Sheets' experience, which
+						leveraged Airtable CMS as our back-end. Airtable CMS offered a "Google Sheets" experience, which
 						everyone on the team is familar with, and it also let us define a schema that works well for us.
 						<br />
 						<br />
