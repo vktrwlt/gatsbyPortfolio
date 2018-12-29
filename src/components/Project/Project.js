@@ -47,7 +47,7 @@ const ProjectDetail = styled.div`
 	z-index: 200;
 	height: 100%;
 	width: 100%;
-	${tw`flex flex-col justify-between`};
+	${tw`flex flex-col justify-between leading-normal`};
 	& h3 {
 		margin: 0 0 10px;
 	}

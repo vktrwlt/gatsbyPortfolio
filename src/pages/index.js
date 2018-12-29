@@ -31,6 +31,20 @@ const IndexPage = () => (
 			<Project title="NetBase Pro" link="/" thumbnail={withPrefix('/images/nbpro/nbpro-thumbnail.png')}>
 				Social media analytic app
 			</Project>
+			<Project
+				title="Dangfoods"
+				link="dangfoods"
+				thumbnail={withPrefix('/images/dangfoods/dangfoods-thumbnail.png')}
+			>
+				Redesign e-Commerce site in WordPress
+			</Project>
+			<Project
+				title="NetBase Klipfolio Visualizations"
+				link="netbase-klipfolio"
+				thumbnail={withPrefix('/images/dangfoods/dangfoods-thumbnail.png')}
+			>
+				Connecting NetBase API to Klipfolio and creating data visualizations
+			</Project>
 		</ProjectGrid>
 	</Layout>
 );

@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from '@emotion/styled';
+import { jsx, css } from '@emotion/core';
 import { Link } from 'gatsby';
 import { gradient, primaryColor, fallbackBG } from '../../../utils/variables';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 const NavStrip = styled.div`
 	height: 3px;
 	background: ${fallbackBG};
@@ -15,7 +17,7 @@ const Bar = styled.div`
 	width: 100%;
 	z-index: 999;
 	@media screen and (max-width: 1400px) {
-		background-color: rgba(255, 255, 255, 0.8);
+		background-color: ${props => (props.mobileMenu ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0.97)')};
 		border-bottom: 1px solid #ddd;
 	}
 `;
@@ -24,6 +26,7 @@ const Nav = styled.div`
 	${tw`flex justify-between`}
 	padding:5px 50px;
 	color: #434345;
+	position: relative;
 `;
 
 const NavBrand = styled.p`
@@ -39,47 +42,123 @@ const NavBrand = styled.p`
 `;
 
 const NavItems = styled.div`
-	${tw`text-xl flex items-center `}
+	@media screen and (min-width: 600px) {
+		${tw`text-xl flex items-center `}
+		& a {
+			display: block;
+			margin: 0;
+			padding: 0;
+			color: inherit;
+			text-decoration: none;
+			margin-left: 25px;
+			&:first-of-type {
+				margin-left: 0;
+			}
+			&.active {
+				color: ${primaryColor};
+				font-weight: 500;
+			}
+		}
+	}
+	display: none;
+`;
+
+const Hamburger = css`
+	@media screen and (min-width: 600px) {
+		display: none;
+	}
+
+	color: ${primaryColor};
+	position: absolute;
+	right: 50px;
+	top: 50%;
+	font-size: 24px;
+	transform: translateY(-50%);
+	cursor: pointer;
+`;
+
+const MobileNav = styled.div`
+	${tw`text-xl flex flex-col  `}
 	& a {
 		display: block;
 		margin: 0;
 		padding: 0;
 		color: inherit;
 		text-decoration: none;
-		margin-left: 25px;
-		&:first-of-type {
-			margin-left: 0;
-		}
+		padding: 10px 50px;
+		border-top: 1px solid #ddd;
 		&.active {
 			color: ${primaryColor};
 			font-weight: 500;
 		}
 	}
+
+	${props => {
+		if (props.mobileMenu) {
+			return `opacity: 1;
+					display: block;`;
+		} else {
+			return `opacity: 0;
+					display: none;`;
+		}
+	}};
 `;
 
-const NavBar = () => {
-	const isActive = ({ isCurrent }) => {
-		return isCurrent ? { className: 'active' } : null;
+class NavBar extends Component {
+	state = {
+		mobileMenu: false
 	};
 
-	return (
-		<Bar>
-			<NavStrip />
-			<Nav>
-				<NavBrand>
-					<Link to="/">Victor Tsang</Link>
-				</NavBrand>
-				<NavItems>
+	componentDidMount() {
+		this.setState({ mobileMenu: false });
+		window.addEventListener('resize', this.updateDimensions);
+	}
+	componentWillUnmount() {
+		window.removeEventListener('resize', this.updateDimensions);
+	}
+	toggleMenu = () => {
+		this.setState({ mobileMenu: !this.state.mobileMenu });
+	};
+	updateDimensions = () => {
+		if (window.innerWidth > 600) {
+			this.setState({ mobileMenu: false });
+		}
+	};
+	render() {
+		const isActive = ({ isCurrent }) => {
+			return isCurrent ? { className: 'active' } : null;
+		};
+
+		return (
+			<Bar mobileMenu={this.state.mobileMenu}>
+				<NavStrip />
+
+				<Nav>
+					<NavBrand>
+						<Link to="/">Victor Tsang</Link>
+					</NavBrand>
+
+					<NavItems>
+						<Link getProps={isActive} to="/">
+							Work
+						</Link>
+						<Link getProps={isActive} to="/about">
+							About
+						</Link>
+					</NavItems>
+					<FontAwesomeIcon icon={faBars} css={Hamburger} onClick={this.toggleMenu} />
+				</Nav>
+				<MobileNav mobileMenu={this.state.mobileMenu}>
 					<Link getProps={isActive} to="/">
 						Work
 					</Link>
 					<Link getProps={isActive} to="/about">
 						About
 					</Link>
-				</NavItems>
-			</Nav>
-		</Bar>
-	);
-};
+				</MobileNav>
+			</Bar>
+		);
+	}
+}
 
 export default NavBar;

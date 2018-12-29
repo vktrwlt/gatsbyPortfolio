@@ -3,12 +3,7 @@ import styled from '@emotion/styled';
 import { withPrefix } from 'gatsby';
 
 const Wrapper = styled.div`
-	padding: 120px 0 40px;
-	margin: 0 auto;
-	@media screen and (max-width: 768px) {
-		padding: 60px 0;
-		margin-top: 50px;
-	}
+	margin: 100px auto 30px;
 `;
 
 const Title = styled.h2`
@@ -26,14 +21,14 @@ const Img = styled.img`
 	margin-top: 30px;
 `;
 
-const ContentHeader = () => {
+const ProjectHero = ({ title, subtitle, img, ...props }) => {
 	return (
-		<Wrapper>
-			<Title>NetBase On-Tour</Title>
-			<Subtitle> Breakfast seminar event page for NetBase</Subtitle>
-			<Img src={withPrefix('/images/nbontour/nbontour-header.png')} />
+		<Wrapper {...props}>
+			<Title>{title}</Title>
+			<Subtitle>{subtitle}</Subtitle>
+			<Img src={img} alt={title} />
 		</Wrapper>
 	);
 };
 
-export default ContentHeader;
+export default ProjectHero;
