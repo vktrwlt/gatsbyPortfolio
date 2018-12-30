@@ -7,6 +7,7 @@ import Button from '../components/UI/Button/Button';
 import ButtonList from '../components/ButtonList/ButtonList';
 import Content from '../components/Content/Content';
 import ProjectHero from '../components/ProjectHero/ProjectHero';
+import ProjectNav from '../components/ProjectNav/ProjectNav';
 
 const Img = styled.img`
 	width: 100%;
@@ -16,10 +17,10 @@ const Img = styled.img`
 
 const nbontour = () => (
 	<Layout>
-		<SEO title="NetBase On-Tour" keywords={[`gatsby`, `application`, `react`]} />
+		<SEO title="NetBase On-Tour" />
 		<ProjectHero
 			title="NetBase On-Tour"
-			subtitle="Breakfast Seminar site for NetBase"
+			subtitle="Event microsite for NetBase On-Tour"
 			img={withPrefix('/images/nbontour/nbontour-header.png')}
 		/>
 		<Content>
@@ -80,6 +81,7 @@ const nbontour = () => (
 				View Online
 			</Button>
 		</Content>
+		<ProjectNav />
 	</Layout>
 );
 

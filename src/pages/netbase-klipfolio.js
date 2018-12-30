@@ -7,10 +7,11 @@ import Button from '../components/UI/Button/Button';
 import ButtonList from '../components/ButtonList/ButtonList';
 import Content from '../components/Content/Content';
 import ProjectHero from '../components/ProjectHero/ProjectHero';
+import ProjectNav from '../components/ProjectNav/ProjectNav';
 
 const Img = styled.img`
 	width: 100%;
-	max-width: 600px;
+	// max-width: 600px;
 	height: auto;
 `;
 
@@ -20,7 +21,7 @@ const nbklipfolio = () => (
 		<ProjectHero
 			title="NetBase Klipfolio Visualizations"
 			subtitle="Connecting NetBase API to Klipfolio and creating data visualizations"
-			img={withPrefix('/images/dangfoods/dangfoods-header.png')}
+			img={withPrefix('/images/klipfolio/klipfolio-1.png')}
 		/>
 		<Content>
 			<h2>My Role</h2>
@@ -38,6 +39,8 @@ const nbklipfolio = () => (
 				<li>D3.js</li>
 				<li>Node.js</li>
 				<li>Express.js</li>
+				<li>Gulp</li>
+				<li>Require.js</li>
 			</ButtonList>
 
 			<h2>About this project</h2>
@@ -64,12 +67,13 @@ const nbklipfolio = () => (
 
 			<p>
 				Debugging, copying, pasting and saving took a lot of my time, so in order to fix my workflow issue, I
-				created a development environment that mimics the Klipfolio Editor. I used Node and Express to connect
-				to NetBase API and created a route to store the data locally. On the front-end, I used AJAX to get the
-				data and Require.js to import other libraries. If my code works locally then there is a good chance it
-				will work on Klipfolio.
+				created a development environment that outputs the code that Klipfolio requires. I used Node and Express
+				to connect to NetBase API and created a route to store the data locally. On the front-end, I used AJAX
+				to get the data and Require.js to import other libraries. If my code works locally then there is a good
+				chance it will work on Klipfolio.
 			</p>
 		</Content>
+		<ProjectNav />
 	</Layout>
 );
 

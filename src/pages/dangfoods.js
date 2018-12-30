@@ -7,6 +7,7 @@ import Button from '../components/UI/Button/Button';
 import ButtonList from '../components/ButtonList/ButtonList';
 import Content from '../components/Content/Content';
 import ProjectHero from '../components/ProjectHero/ProjectHero';
+import ProjectNav from '../components/ProjectNav/ProjectNav';
 
 const Img = styled.img`
 	width: 100%;
@@ -59,6 +60,7 @@ const dangfoods = () => (
 				View Online
 			</Button>
 		</Content>
+		<ProjectNav />
 	</Layout>
 );
 

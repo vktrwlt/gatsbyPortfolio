@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
-
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Content from '../components/Content/Content';
@@ -11,11 +9,8 @@ const about = () => (
 		<Content noHero={true}>
 			<p>
 				Hi! My name is Victor Tsang and I am currently working as a Front-End Developer at NetBase, a social
-				analytics software company.
-			</p>
-			<p>
-				As the sole developer on the design team, I work cross-functionally between Marketing, Product, and
-				Engineering. At NetBase I have worked on various projects including:
+				analytics software company. As the sole developer on the design team, I work cross-functionally between
+				Marketing, Product, and Engineering. At NetBase I have worked on various projects including:
 			</p>
 			<ul>
 				<li>WordPress theme development</li>
@@ -34,8 +29,6 @@ const about = () => (
 			</p>
 			<p>I am currently searching for a role where I can grow as a Front-End Engineer.</p>
 		</Content>
-
-		<Link to="/">Go back to the homepage</Link>
 	</Layout>
 );
 
