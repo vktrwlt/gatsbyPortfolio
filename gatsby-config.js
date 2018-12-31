@@ -39,7 +39,7 @@ module.exports = {
 			options: {
 				trackingId: 'UA-131565495-1',
 				// Puts tracking script in the head instead of the body
-				head: false,
+				head: true,
 				// Setting this parameter is optional
 				anonymize: true,
 				// Setting this parameter is also optional
@@ -51,7 +51,7 @@ module.exports = {
 				// Any additional create only fields (optional)
 				sampleRate: 5,
 				siteSpeedSampleRate: 10,
-				cookieDomain: 'example.com'
+				cookieDomain: 'vktr.me'
 			}
 		}
 		// this (optional) plugin enables Progressive Web App + Offline functionality
