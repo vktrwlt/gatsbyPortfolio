@@ -44,12 +44,12 @@ const nbpro = () => (
 			<h2>About this project</h2>
 			<p>
 				Before the redesign, NetBase Pro was not user-friendly and was not mobile responsive. We wanted an
-				application that was friendly for non-analyst users, so we decided to rewrite the 90% of the front-end.
-				As the Front-End Developer on this project, I worked with designers and project managers to iterate
-				through various designs before passing my code to the engineering team. Using HTML5, CSS3, Bootstrap,
-				SCSS, and JavaScript, I reskinned the company's app, the only code that remained the same was the cards
-				and card grid. I also worked on improving the look and feel of the charts and also prototyped new charts
-				in Highcharts.
+				application that was friendly for non-analyst users, so we decided to rewrite 90% of the front-end. As
+				the Front-End Developer on this project, I worked with designers and project managers to iterate through
+				various designs before passing my code to the engineering team. Using HTML5, CSS3, Bootstrap, SCSS, and
+				JavaScript, I reskinned the company's app, the only code that remained the same was the cards and card
+				grid. I also worked on improving the look and feel of the charts and also prototyped new charts in
+				Highcharts.
 			</p>
 		</Content>
 		<ProjectNav />
