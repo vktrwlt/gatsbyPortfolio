@@ -56,7 +56,7 @@ const dangfoods = () => (
 
 			<h2>Project link</h2>
 
-			<Button href="https://www.netbase.com/on-tour/" target="_blank" rel="noopener noreferrer">
+			<Button href="https://dangfoods.com/" target="_blank" rel="noopener noreferrer">
 				View Online
 			</Button>
 		</Content>
