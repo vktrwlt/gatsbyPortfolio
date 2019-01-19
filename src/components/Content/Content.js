@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
 const Wrapper = styled.div`
@@ -22,6 +23,10 @@ const Wrapper = styled.div`
 
 const Content = props => {
 	return <Wrapper {...props}>{props.children}</Wrapper>;
+};
+
+Content.propTypes = {
+	noHero: PropTypes.bool
 };
 
 export default Content;
