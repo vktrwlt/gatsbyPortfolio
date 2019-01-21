@@ -81,7 +81,9 @@ const Hamburger = css`
 
 const MobileNav = styled.div`
 	${tw`text-xl flex flex-col  `}
-	background:white;
+
+	background: white;
+	margin-top: 7px;
 	& a {
 		display: block;
 		margin: 0;
@@ -98,14 +100,15 @@ const MobileNav = styled.div`
 			font-weight: 500;
 		}
 	}
-
+	transition: opacity 0.3s ease-out;
 	${props => {
 		if (props.mobileMenu) {
-			return `opacity: 1;
-					display: block;`;
+			return ` opacity: 1;
+    				 height: auto;`;
 		} else {
-			return `opacity: 0;
-					display: none;`;
+			return `  opacity: 0; 
+    				  height: 0;
+    				  overflow: hidden;`;
 		}
 	}};
 `;
