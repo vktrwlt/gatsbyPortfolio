@@ -6,11 +6,23 @@ import Hero from '../components/Hero/Hero';
 import Project from '../components/Project/Project';
 import { withPrefix } from 'gatsby';
 const ProjectGrid = styled.div`
-	display: grid;
-	grid-gap: 30px;
-	@media screen and (min-width: 600px) {
-		grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+	
+display:-ms-flexbox;
+display:flex;
+-ms-flex-pack:justify;
+	justify-content:space-between;
+-ms-flex-wrap:wrap;
+	flex-wrap:wrap;
+	> div{
+		width:48%;
+		margin-bottom:3%;
+		@media screen and (max-width: 980px) {
+			width:100%;
+			margin-bottom:30px;
+			}
+		}
 	}
+
 `;
 
 const IndexPage = () => (
