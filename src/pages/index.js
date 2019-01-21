@@ -16,7 +16,7 @@ display:flex;
 	> div{
 		width:48%;
 		margin-bottom:3%;
-		@media screen and (max-width: 980px) {
+		@media screen and (max-width: 767px) {
 			width:100%;
 			margin-bottom:30px;
 			}
