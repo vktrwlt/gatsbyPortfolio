@@ -49,6 +49,10 @@
   "devDependencies": {
     "prettier": "^1.15.2"
   },
+  "browserslist": [
+    "last 4 versions",
+    "not dead"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
