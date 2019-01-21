@@ -7,13 +7,14 @@ const Wrapper = styled.div`
 	padding: 20px 0;
 	background: ${fallbackBG};
 	background: ${gradient};
-	margin-top: 100px;
+	width: 100%;
 `;
 const Text = styled.h3`
 	${tw`text-white font-sans m-0 text-center`};
 	text-shadow: 0 5px 35px rgba(255, 255, 255, 0.15);
 	font-size: 16px;
 	font-weight: 200;
+	margin-bottom: 15px;
 `;
 
 const IconList = styled.ul`
@@ -36,9 +37,9 @@ const IconList = styled.ul`
 	}
 `;
 
-const Footer = () => {
+const Footer = ({ fixed }) => {
 	return (
-		<Wrapper>
+		<Wrapper fixed={fixed}>
 			<IconList>
 				<li>
 					<a href="https://www.linkedin.com/in/victorwltsang/" target="_blank" rel="noopener noreferrer">

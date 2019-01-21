@@ -13,6 +13,8 @@ const NavStrip = styled.div`
 
 const Bar = styled.div`
 	position: fixed;
+
+	height: 85px;
 	top: 0;
 	width: 100%;
 	z-index: 999;
@@ -79,6 +81,7 @@ const Hamburger = css`
 
 const MobileNav = styled.div`
 	${tw`text-xl flex flex-col  `}
+	background:white;
 	& a {
 		display: block;
 		margin: 0;
@@ -87,6 +90,9 @@ const MobileNav = styled.div`
 		text-decoration: none;
 		padding: 10px 50px;
 		border-top: 1px solid #ddd;
+		&:last-child {
+			border-bottom: 1px solid #ddd;
+		}
 		&.active {
 			color: ${primaryColor};
 			font-weight: 500;

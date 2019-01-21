@@ -4,7 +4,6 @@ import Helmet from 'react-helmet';
 import 'typeface-ubuntu';
 import styled from '@emotion/styled';
 import { StaticQuery, graphql } from 'gatsby';
-import Header from './header';
 import './layout.css';
 import NavBar from './UI/NavBar/NavBar';
 import Container from './UI/Container/Container';
@@ -13,12 +12,13 @@ import Footer from './UI/Footer/Footer';
 const Body = styled.div`
 	${tw`font-sans`};
 `;
+const Wrap = styled.div`
+	min-height: calc(100vh - 141px);
+	// border: 1px solid green;
+	padding-bottom: 80px;
 
-const FlexContainer = styled.div`
-	${tw`flex flex-col justify-between`};
-	height: 100vh;
+	overflow: auto;
 `;
-
 const Layout = ({ children }) => (
 	<StaticQuery
 		query={graphql`
@@ -44,10 +44,11 @@ const Layout = ({ children }) => (
 
 				<Body>
 					<NavBar />
-					<FlexContainer>
+					<Wrap>
 						<Container>{children}</Container>
-						<Footer />
-					</FlexContainer>
+					</Wrap>
+
+					<Footer />
 				</Body>
 			</>
 		)}
