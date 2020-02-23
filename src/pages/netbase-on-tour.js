@@ -21,7 +21,7 @@ const nbontour = () => (
 		<ProjectHero
 			title="NetBase On-Tour"
 			subtitle="Event microsite for NetBase On-Tour"
-			img={withPrefix('/images/nbontour/nbontour-header.png')}
+			img={withPrefix('/images/nbontour/nbontour-header.jpg')}
 		/>
 		<Content>
 			<h2>My Role</h2>
@@ -70,16 +70,12 @@ const nbontour = () => (
 
 			<div>
 				<h3>Before</h3>
-				<Img src={withPrefix('/images/nbontour/nbontour-before.png')} />
+				<Img src={withPrefix('/images/nbontour/nbontour-before.jpg')} />
 				<h3>After</h3>
-				<Img src={withPrefix('/images/nbontour/nbontour-after.png')} />
+				<Img src={withPrefix('/images/nbontour/nbontour-after.jpg')} />
 			</div>
 
-			<h2>Project link</h2>
-
-			<Button href="https://www.netbase.com/on-tour/" target="_blank" rel="noopener noreferrer">
-				View Online
-			</Button>
+		
 		</Content>
 		<ProjectNav />
 	</Layout>

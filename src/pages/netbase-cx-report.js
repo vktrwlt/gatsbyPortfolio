@@ -21,7 +21,7 @@ const nbcxreport = () => (
 		<ProjectHero
 			title="NetBase Customer Experience Reports"
 			subtitle="Dashboard for "
-			img={withPrefix('/images/dangfoods/dangfoods-header.png')}
+			img={withPrefix('/images/dangfoods/dangfoods-header.jpg')}
 		/>
 		<Content>
 			<h2>My Role</h2>

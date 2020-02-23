@@ -21,7 +21,7 @@ const dangfoods = () => (
 		<ProjectHero
 			title="Dangfoods"
 			subtitle="Redesign e-Commerce site in WordPress"
-			img={withPrefix('/images/dangfoods/dangfoods-header.png')}
+			img={withPrefix('/images/dangfoods/dangfoods-header.jpg')}
 		/>
 		<Content>
 			<h2>My Role</h2>
@@ -54,11 +54,6 @@ const dangfoods = () => (
 				happy that he could add and update products with ease.
 			</p>
 
-			<h2>Project link</h2>
-
-			<Button href="https://dangfoods.com/" target="_blank" rel="noopener noreferrer">
-				View Online
-			</Button>
 		</Content>
 		<ProjectNav />
 	</Layout>

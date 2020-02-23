@@ -21,7 +21,7 @@ const nbklipfolio = () => (
 		<ProjectHero
 			title="NetBase Klipfolio Visualizations"
 			subtitle="Connecting NetBase API to Klipfolio and creating data visualizations"
-			img={withPrefix('/images/klipfolio/klipfolio-1.png')}
+			img={withPrefix('/images/klipfolio/klipfolio-1.jpg')}
 		/>
 		<Content>
 			<h2>My Role</h2>

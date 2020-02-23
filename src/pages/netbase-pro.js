@@ -21,7 +21,7 @@ const nbpro = () => (
 		<ProjectHero
 			title="NetBase Pro"
 			subtitle="Social media analytics app redesign"
-			img={withPrefix('/images/nbpro/nbpro-header.png')}
+			img={withPrefix('/images/nbpro/nbpro-header.jpg')}
 		/>
 		<Content>
 			<h2>My Role</h2>

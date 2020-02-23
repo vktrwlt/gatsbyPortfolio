@@ -27,34 +27,34 @@ display:flex;
 
 const IndexPage = () => (
 	<Layout>
-		<SEO title="My Work" keywords={[`Victor Tsang`, `Full Stack Developer`, `Front End Developer`]} />
+		<SEO title="My Work | Victor Tsang" keywords={[`Victor Tsang`, `Full Stack Developer`, `Front End Developer`]} />
 		<Hero />
 		<ProjectGrid>
 			<Project
 				title="NetBase On-Tour"
 				link="/netbase-on-tour"
-				thumbnail={withPrefix('/images/nbontour/nbontour-thumbnail.png')}
+				thumbnail={withPrefix('/images/nbontour/nbontour-thumbnail.jpg')}
 			>
 				Event microsite for NetBase On-Tour
 			</Project>
 			<Project
 				title="NetBase Pro"
 				link="/netbase-pro"
-				thumbnail={withPrefix('/images/nbpro/nbpro-thumbnail.png')}
+				thumbnail={withPrefix('/images/nbpro/nbpro-thumbnail.jpg')}
 			>
 				Social media analytics app redesign
 			</Project>
 			<Project
 				title="Dangfoods"
 				link="/dangfoods"
-				thumbnail={withPrefix('/images/dangfoods/dangfoods-thumbnail.png')}
+				thumbnail={withPrefix('/images/dangfoods/dangfoods-thumbnail.jpg')}
 			>
 				Redesign e-Commerce site in WordPress
 			</Project>
 			<Project
 				title="NetBase Klipfolio Visualizations"
 				link="/netbase-klipfolio"
-				thumbnail={withPrefix('/images/klipfolio/klipfolio-thumbnail.png')}
+				thumbnail={withPrefix('/images/klipfolio/klipfolio-thumbnail.jpg')}
 			>
 				Connecting NetBase API to Klipfolio and creating data visualizations
 			</Project>
