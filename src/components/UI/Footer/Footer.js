@@ -42,12 +42,12 @@ const Footer = ({ fixed }) => {
 		<Wrapper fixed={fixed}>
 			<IconList>
 				<li>
-					<a href="https://www.linkedin.com/in/victorwltsang/" target="_blank" rel="noopener noreferrer">
+					<a href="https://www.linkedin.com/in/vktrwlt/" target="_blank" rel="noopener noreferrer">
 						<FaLinkedinIn />
 					</a>
 				</li>
 				<li>
-					<a href="https://github.com/victorwltsang" target="_blank" rel="noopener noreferrer">
+					<a href="https://github.com/vktrwlt" target="_blank" rel="noopener noreferrer">
 						<FaGithub />
 					</a>
 				</li>
