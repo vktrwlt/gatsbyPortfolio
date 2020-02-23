@@ -25,7 +25,7 @@ const Bar = styled.div`
 `;
 
 const Nav = styled.div`
-	${tw`flex justify-between`}
+	${tw`flex justify-between items-center`}
 	padding:5px 50px;
 	color: #434345;
 	position: relative;
@@ -71,11 +71,7 @@ const Hamburger = css`
 	}
 
 	color: ${primaryColor};
-	position: absolute;
-	right: 50px;
-	top: 50%;
 	font-size: 24px;
-	transform: translateY(-50%);
 	cursor: pointer;
 `;
 
